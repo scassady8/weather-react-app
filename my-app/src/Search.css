@@ -1,0 +1,26 @@
+.Search a {
+    color: #2994b2;
+  }
+  .Search .active {
+    color: #444f5a;
+    text-decoration: none;
+  }
+  .Search .input-location {
+    max-width: 250px;
+    margin-bottom: 5px;
+  }
+  .Search .current-location-btn {
+    background-color: #2994b2;
+    border-color: #2994b2;
+    max-width: 160px;
+    color: white;
+  }
+  .Search .celsius-scale,
+  .Search .farenheit-scale {
+    text-decoration: none;
+  }
+  .Search .celsius-scale:hover,
+  .Search .farenheit-scale:hover {
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,31 @@
+.Forecast h1 {
+    color: #2994b2;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .Forecast ul {
+    list-style: none;
+  }
+  .Forecast .current-weather {
+    padding: 15px;
+  }
+  .Forecast .current-temp {
+    font-size: 32px;
+    position: relative;
+    top: 10px;
+    left: 25px;
+  }
+  .Forecast .current-details {
+    float: right;
+  }
+  .Forecast .five-day-forecast {
+    text-align: center;
+    line-height: 32px;
+  }
+  .Forecast .low {
+    opacity: 80%;
+  }
+  .Forecast .current-description {
+    text-transform: capitalize;
+  }
+  
