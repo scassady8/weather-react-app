@@ -8,7 +8,7 @@ export default function Footer() {
         <a
           href="https://github.com/scassady8/weather-react-app"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Open source code
         </a>{" "}
