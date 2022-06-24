@@ -19,7 +19,7 @@ export default function Forecast(props) {
       }
     )
   }
-  if (ready) {  
+  if (weatherData.ready) {  
   return (
     <div className="Forecast">
       <div className="current-weather">
