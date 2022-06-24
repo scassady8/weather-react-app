@@ -39,7 +39,7 @@ export default function Forecast(props) {
             <ul>
               <li>Feels like: {Math.round(weatherData.feelsLikeTemp)}° C</li>
               <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind} m/s</li>
+              <li>Wind: {Math.round(weatherData.wind)} m/s</li>
             </ul>
           </div>
           <div className="col-3 current-details">
