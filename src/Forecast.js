@@ -3,21 +3,19 @@ import axios from 'axios';
 import "./Forecast.css";
 
 export default function Forecast(props) {
-  const [weatherData, setWeatherData] = useState({ready=false})
+  const [weatherData, setWeatherData] = useState({ready: false})
   function handleResponse(response) {
     setWeatherData (
       {
-        ready=true,
-        temperature = response.data.main.temp,
-        description = response.data.weather[0].description,
-        icon = (null),
-        feelsLikeTemp = response.data.main.feels_like,
-        humidity= response.data.main.humidity,
-        wind= response.data.wind.speed,
-        sunriseUTC = new Date(response.data.sys.sunrise * 1000),
-        sunsetUTC = new Date(response.data.sys.sunset * 1000),
-        sunrise = (null),
-        sunset = (null),
+        ready: true,
+        temperature: response.data.main.temp,
+        description: response.data.weather[0].description,
+        iconURL: null,
+        feelsLikeTemp: response.data.main.feels_like,
+        humidity: response.data.main.humidity,
+        wind: response.data.wind.speed,
+        sunrise: null,
+        sunset: null,
       }
     )
   }
@@ -31,10 +29,10 @@ export default function Forecast(props) {
             <h4>Today</h4>
           </div>
           <div className="col-12">
-            <h4 className="current-description">{weatherData.description}</h4>
+            <h4 className="text-capitalize">{weatherData.description}</h4>
           </div>
           <div className="col-6 current-temp">
-            <img src="" alt="" />
+            <img src={weatherData.iconURL} alt="" />
             <span>{Math.round(weatherData.temperature)}° C</span>
           </div>
           <div className="col-3 current-details">
