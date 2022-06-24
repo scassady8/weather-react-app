@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Search />
-        <Forecast />
+        <Forecast city="Trondheim" />
       </div>
       <Footer />
     </div>
