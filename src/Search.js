@@ -3,7 +3,7 @@ import axios from 'axios';
 import Forecast from "./Forecast";
 import "./Search.css";
 
-export default function Search() {
+export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ready: false})
   const [city, setCity] = useState(props.city)
   function handleResponse(response) {
