@@ -4,12 +4,14 @@ import Forecast from "./Forecast";
 import "./Search.css";
 
 export default function Search(props) {
-  const [weatherData, setWeatherData] = useState({ready: false})
-  const [city, setCity] = useState(props.city)
+  const [weatherData, setWeatherData] = useState({ready: false});
+  const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
   setWeatherData (
       {
         ready: true,
+        city: response.data.name,
         temperature: response.data.main.temp,
         description: response.data.weather[0].description,
         iconURL: null,
@@ -20,13 +22,7 @@ export default function Search(props) {
         sunriseUTC: new Date(response.data.sys.sunrise * 1000),
         sunsetUTC: new Date(response.data.sys.sunset * 1000)
       }
-    )
-  }
-
-  function search() {
-    const apiKey= "c6d74f51206d84d8baa8c0c74cb8a21c";
-    const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    );
   }
 
   function handleSubmit(event) {
@@ -39,25 +35,30 @@ export default function Search(props) {
     setCity(event.target.value);
   }
 
+  function search() {
+    const apiKey= "c6d74f51206d84d8baa8c0c74cb8a21c";
+    const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (weatherData.ready) {
   return (
     <div className="Search">
-      <form>
-        <div className="row search-inputs">
+      <form onSubmit={handleSubmit}>
+        <div className="row">
           <div className="col-9">
             <input
               type="search"
-              className="form-control float-end input-location"
+              className="form-control float-end"
               placeholder="Enter location"
               autoFocus="on"
               onChange={updateCity}
-              onSubmit={handleSubmit}
             />
           </div>
-          <div className="col-3 w-100">
+          <div className="col-3">
             <input
               type="button"
-              className="btn form-control float-end shadow-sm current-location-btn"
+              className="btn form-control float-end shadow-sm current-location-btn w-100"
               value="Current location"
             />
           </div>
