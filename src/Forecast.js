@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import FormattedDate from "./FormattedDate";
+import FormattedSunriseTime from "./FormattedSunriseTime";
+import FormattedSunsetTime from "./FormattedSunsetTime";
 import "./Forecast.css";
 
 export default function Forecast(props) {
@@ -14,8 +17,9 @@ export default function Forecast(props) {
         feelsLikeTemp: response.data.main.feels_like,
         humidity: response.data.main.humidity,
         wind: response.data.wind.speed,
-        sunrise: null,
-        sunset: null,
+        date:new Date(response.data.dt * 1000),
+        sunriseUTC: new Date(response.data.sys.sunrise * 1000),
+        sunsetUTC: new Date(response.data.sys.sunset * 1000)
       }
     )
   }
@@ -26,7 +30,7 @@ export default function Forecast(props) {
         <h1>{props.city}</h1>
         <div className="row">
           <div className="col-12">
-            <h4>Today</h4>
+            <h4><FormattedDate date={weatherData.date} /></h4>
           </div>
           <div className="col-12">
             <h4 className="text-capitalize">{weatherData.description}</h4>
@@ -44,8 +48,8 @@ export default function Forecast(props) {
           </div>
           <div className="col-3 current-details">
             <ul>
-              <li>Sunrise: {weatherData.sunrise}</li>
-              <li>Sunset: {weatherData.sunset}</li>
+              <li><FormattedSunriseTime sunrise={weatherData.sunriseUTC}/></li>
+              <li><FormattedSunsetTime sunset={weatherData.sunsetUTC}/></li>
             </ul>
           </div>
         </div>
