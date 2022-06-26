@@ -17,7 +17,7 @@ export default function Forecast(props) {
             <h4 className="text-capitalize">{props.data.description}</h4>
           </div>
           <div className="col-6 current-temp">
-            <img src={props.data.iconURL} alt="" />
+            <img src={props.data.icon} alt={props.data.value} />
             <span>{Math.round(props.data.temperature)}° C</span>
           </div>
           <div className="col-3 current-details">
