@@ -16,12 +16,12 @@ export default function TemperatureConversion(props) {
 
     if (unit=== "metric") {return (
        <div className="temperatures">
-            <div className="col-6 current-temp">
+            <div className="col-md-4 current-temp">
                 <img src={props.icon} alt={props.icondescription} />
                 <span>{Math.round(props.temperature)} </span>
-                <span><a >°C</a>| <a href="/" onClick={showFahrenheit}>°F</a></span>
+                <span className="units"><a >°C</a>| <a href="/" onClick={showFahrenheit}>°F</a></span>
             </div>
-            <div className="col-3 current-details">
+            <div className="col-md-4 current-details">
                 <ul>
                 <li>Max: {Math.round(props.max)}°</li> 
                 <li>Min: {Math.round(props.min)}°</li> 
