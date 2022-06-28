@@ -16,6 +16,8 @@ export default function Search(props) {
         description: response.data.weather[0].description,
         icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
         icondescription: response.data.weather[0].value,
+        max: response.data.main.temp_max,
+        min: response.data.main.temp_min, 
         feelsLikeTemp: response.data.main.feels_like,
         humidity: response.data.main.humidity,
         wind: response.data.wind.speed,
@@ -62,12 +64,6 @@ export default function Search(props) {
               className="btn form-control float-end shadow-sm current-location-btn w-100"
               value="Current location"
             />
-          </div>
-          <div className="col-12">
-            <span className="float-end">
-              <a className="celsius-scale active">°C</a>|
-              <a className="farenheit-scale">°F</a>
-            </span>
           </div>
         </div>
       </form>
