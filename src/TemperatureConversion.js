@@ -15,19 +15,19 @@ export default function TemperatureConversion(props) {
     }
 
     if (unit=== "metric") {return (
-       <div className="temperatures">
+       <span className="temperatures">
             <span className="current-temp">{Math.round(props.temperature)} </span>
             <span className="units"><a >°C</a>| <a href="/" onClick={showFahrenheit}>°F</a></span>
-        </div>
+        </span>
            
     );
 } else {
     let fahrenheitTemperature = (props.temperature * 9) /5 + 32 ;  
     return ( 
-        <div className="temperatures">
-            <span>{Math.round(fahrenheitTemperature)}</span>
+        <span className="temperatures">
+            <span className="current-temp">{Math.round(fahrenheitTemperature)}</span>
             <span className="units"><a href="/" onClick={showCelsius}>°C</a>| <a >°F</a></span>
-        </div>
+        </span>
     );
 }   
 }
