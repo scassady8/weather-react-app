@@ -16,7 +16,7 @@ export default function TemperatureConversion(props) {
 
     if (unit=== "metric") {return (
        <div className="temperatures">
-            <span>{Math.round(props.temperature)} </span>
+            <span className="current-temp">{Math.round(props.temperature)} </span>
             <span className="units"><a >°C</a>| <a href="/" onClick={showFahrenheit}>°F</a></span>
         </div>
            

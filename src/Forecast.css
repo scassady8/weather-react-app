@@ -11,12 +11,7 @@
   }
   .Forecast .current-temp {
     font-size: 32px;
-    position: relative;
-    top: 10px;
-    left: 25px;
-  }
-  .Forecast .current-details {
-    float: right;
+    line-height: 32px;
   }
   .Forecast .five-day-forecast {
     text-align: center;
@@ -25,7 +20,5 @@
   .Forecast .low {
     opacity: 80%;
   }
-  .Forecast .current-description {
-    text-transform: capitalize;
-  }
+
   
