@@ -22,8 +22,8 @@ export default function Search(props) {
         humidity: response.data.main.humidity,
         wind: response.data.wind.speed,
         date:new Date(response.data.dt * 1000),
-        sunriseUTC: new Date((response.data.sys.sunrise + response.data.sys.timezone) * 1000),
-        sunsetUTC: new Date((response.data.sys.sunset + response.data.sys.timezone)* 1000)
+        sunriseUTC: new Date((response.data.sys.sunrise) * 1000),
+        sunsetUTC: new Date((response.data.sys.sunset)* 1000)
       }
     );
   }
