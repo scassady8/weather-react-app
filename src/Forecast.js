@@ -6,9 +6,6 @@ import FormattedSunsetTime from "./FormattedSunsetTime";
 import "./Forecast.css";
 
 export default function Forecast(props) {
-
-
-
   return (
     <div className="Forecast">
       <div className="current-weather">
@@ -20,7 +17,18 @@ export default function Forecast(props) {
           <div className="col-12">
             <h4 className="text-capitalize">{props.data.description}</h4>
           </div>
-          <TemperatureConversion temperature={props.data.temperature} feelsLikeTemp={props.data.feelsLikeTemp} max={props.data.max} min={props.data.min} icon={props.data.icon} icondescription={props.data.icondescription}/>
+          <div className="temperatures">
+            <div className="col-md-4 current-temp">
+                <img src={props.icon} alt={props.icondescription} />
+                <TemperatureConversion temperature={props.data.temperature} />
+            </div>
+          <div className="col-md-4 current-details">
+                <ul>
+                <li>Max: {Math.round(props.data.max)}°</li> 
+                <li>Min: {Math.round(props.data.min)}°</li> 
+                 <li>Feels like: {Math.round(props.data.feelsLikeTemp)}°</li> 
+                </ul>
+            </div>
           <div className="col-md-4 current-details">
             <ul>
               <li>Humidity: {props.data.humidity}%</li>
@@ -31,7 +39,7 @@ export default function Forecast(props) {
           </div>
         </div>
       </div>
-      <div className="five-day-forecast"></div>
+      </div>
     </div>
   ); 
 }
