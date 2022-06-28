@@ -17,19 +17,18 @@ export default function Forecast(props) {
           <div className="col-12">
             <h4 className="text-capitalize">{props.data.description}</h4>
           </div>
-          <div className="temperatures">
-            <div className="col-md-4 current-temp">
-                <img src={props.icon} alt={props.icondescription} />
+          <div className="col-6">
+                <img src={props.data.icon} alt={props.data.icondescription} />
                 <TemperatureConversion temperature={props.data.temperature} />
             </div>
-          <div className="col-md-4 current-details">
+          <div className="col-3">
                 <ul>
                 <li>Max: {Math.round(props.data.max)}°</li> 
                 <li>Min: {Math.round(props.data.min)}°</li> 
-                 <li>Feels like: {Math.round(props.data.feelsLikeTemp)}°</li> 
+                <li>Feels like: {Math.round(props.data.feelsLikeTemp)}°</li> 
                 </ul>
             </div>
-          <div className="col-md-4 current-details">
+          <div className="col-3">
             <ul>
               <li>Humidity: {props.data.humidity}%</li>
               <li>Wind: {Math.round(props.data.wind)} m/s</li>
@@ -38,7 +37,6 @@ export default function Forecast(props) {
             </ul>
           </div>
         </div>
-      </div>
       </div>
     </div>
   ); 

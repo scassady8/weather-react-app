@@ -1,5 +1,7 @@
 .units {
     font-size: 16px;
+    position: relative;
+    top: -16px; 
 }
 a {
     color: #2994b2;
