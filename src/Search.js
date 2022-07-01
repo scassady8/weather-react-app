@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Forecast from "./Forecast";
+import FiveDayForecast from './FiveDayForecast';
 import "./Search.css";
 
 export default function Search(props) {
@@ -12,6 +13,7 @@ export default function Search(props) {
       {
         ready: true,
         city: response.data.name,
+        coordinates:response.data.coord,
         temperature: response.data.main.temp,
         description: response.data.weather[0].description,
         icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -68,6 +70,7 @@ export default function Search(props) {
         </div>
       </form>
       <Forecast data={weatherData} />
+      <FiveDayForecast coord={weatherData.coord}/>
     </div>
   ); }
   else {

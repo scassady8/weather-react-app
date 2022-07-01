@@ -1,0 +1,7 @@
+.fiveDayForecast {
+    text-align: center;
+    line-height: 32px;
+  }
+  .fiveDayForecast-temperature-min {
+    opacity: 80%;
+  }
