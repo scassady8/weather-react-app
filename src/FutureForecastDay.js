@@ -3,10 +3,12 @@ import React from 'react';
 export default function FutureForecastDay(props) {
     function maxTemperature() {
         let maxTemperature = Math.round(props.data.temp.max)
+        return `${maxTemperature}°`;
     }
     
     function maxTemperature() {
         let minTemperature = Math.round(props.data.temp.min)
+        return `${minTemperature}°`;
     }
 
     function formatDay(){
@@ -21,8 +23,8 @@ export default function FutureForecastDay(props) {
             <div className="futureForecast-day">{formatDay()}</div>
                         <img src={props.data.weather[0].icon} alt={props.data.weather[0].description}/>
                         <div className="futureForecast-temperature">
-                            <span className="futureForecast-temperature-max">{maxTemperature()}°</span>
-                            <span className="futureForecast-temperature-min">{minTemperature()}°</span>
+                            <span className="futureForecast-temperature-max">{maxTemperature()}</span>
+                            <span className="futureForecast-temperature-min">{minTemperature()}</span>
                         </div>
         </div>
     );
