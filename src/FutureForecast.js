@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import axios from "axios";
-import FutureForecastDay from './FutureForecastDay';
+import FutureForecastDay from "./FutureForecastDay";
 import "./FutureForecast.css";
 
 export default function FutureForecast(props) {
-    const [loaded, setLoaded] = useState(false)
-    const [FutureData, setFutureData] = useState(null);
+    let [loaded, setLoaded] = useState(false)
+    let [FutureData, setFutureData] = useState(null);
 
     function handleResponse(response) {
-        setFutureData(response.data.daily[0]);
+        setFutureData(response.data.daily);
         setLoaded(true);
     }
 
@@ -17,7 +17,7 @@ export default function FutureForecast(props) {
             <div className="futureForecast">
                 <div className="row">
                     <div className="col">
-                        <FutureForecastDay data={FutureData}/>
+                        <FutureForecastDay data={FutureData[0]}/>
                     </div>
                 </div>
             </div>
