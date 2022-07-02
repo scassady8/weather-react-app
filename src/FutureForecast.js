@@ -24,9 +24,9 @@ export default function FutureForecast(props) {
         );
     } else {
         const apiKey= "c6d74f51206d84d8baa8c0c74cb8a21c";
-        let lon= props.coord.lon;
-        let lat= props.coord.lat;
-        const APIUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        let longitude= props.coord.lon;
+        let latitude= props.coord.lat;
+        let APIUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
         axios.get(APIUrl).then(handleResponse);
 
         return null;  
