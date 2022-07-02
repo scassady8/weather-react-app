@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Forecast from "./Forecast";
-import FiveDayForecast from './FiveDayForecast';
+import FutureForecast from './FutureForecast';
 import "./Search.css";
 
 export default function Search(props) {
@@ -70,7 +70,7 @@ export default function Search(props) {
         </div>
       </form>
       <Forecast data={weatherData} />
-      <FiveDayForecast coord={weatherData.coord}/>
+      <FutureForecast coord={weatherData.coord}/>
     </div>
   ); }
   else {
