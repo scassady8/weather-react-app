@@ -4,15 +4,15 @@ import FutureForecastDay from './FutureForecastDay';
 import "./FutureForecast.css";
 
 export default function FutureForecast(props) {
-    const [ready, setReady] = useState(false)
+    const [loaded, setLoaded] = useState(false)
     const [FutureData, setFutureData] = useState(null);
 
     function handleResponse(response) {
         setFutureData(response.data.daily[0]);
-        setReady(true);
+        setLoaded(true);
     }
 
-    if (ready) {
+    if (loaded) {
         return (
             <div className="futureForecast">
                 <div className="row">
