@@ -2,17 +2,17 @@ import React from 'react';
 
 export default function FutureForecastDay(props) {
     function maxTemperature() {
-        let maxTemperature = Math.round(props.data.temp.max)
+        let maxTemperature = Math.round(props.data.temp.max);
         return `${maxTemperature}°`;
     }
     
-    function maxTemperature() {
-        let minTemperature = Math.round(props.data.temp.min)
+    function minTemperature() {
+        let minTemperature = Math.round(props.data.temp.min);
         return `${minTemperature}°`;
     }
 
     function formatDay(){
-        let date = new Date(response.data.dt * 1000);
+        let date = new Date(props.data.dt * 1000);
         let day = date.getDay();
         let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
         return days[day];
