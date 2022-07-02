@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 import Forecast from "./Forecast";
-import FutureForecast from './FutureForecast';
+import FutureForecast from "./FutureForecast";
 import "./Search.css";
 
 export default function Search(props) {
