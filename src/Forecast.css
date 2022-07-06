@@ -9,6 +9,7 @@
   }
   .Forecast ul {
     list-style: none;
+    margin-top: 20px;
   }
   .Forecast .current-weather {
     padding: 15px;
@@ -16,5 +17,8 @@
   .Forecast .current-temp {
     font-size: 32px;
     line-height: 32px;
+  }
+  .Forecast .caption {
+    margin-right: 10px;
   }
  
