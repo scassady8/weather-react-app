@@ -46,6 +46,19 @@ export default function Search(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(submitCurrentLocation); 
+  }
+
+  function submitCurrentLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiKey = "c6d74f51206d84d8baa8c0c74cb8a21c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (weatherData.ready) {
   return (
     <div className="Search">
@@ -65,6 +78,7 @@ export default function Search(props) {
               type="button"
               className="btn form-control shadow-sm current-location-btn w-100"
               value="Current location"
+              onClick={getCurrentLocation}
             />
           </div>
         </div>
