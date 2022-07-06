@@ -3,6 +3,7 @@ body {
   font-family: "Oxygen", sans-serif;
   font-size: 18px;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background-attachment: fixed;
 }
 .container {
   background-color: #ffffff;
