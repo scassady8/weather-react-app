@@ -16,7 +16,7 @@ export default function Search(props) {
         coordinates:response.data.coord,
         temperature: response.data.main.temp,
         description: response.data.weather[0].description,
-        icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+        icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
         icondescription: response.data.weather[0].value,
         max: response.data.main.temp_max,
         min: response.data.main.temp_min, 

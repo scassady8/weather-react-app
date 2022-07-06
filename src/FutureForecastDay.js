@@ -19,7 +19,7 @@ export default function FutureForecastDay(props) {
     }
 
     function getIcon(){
-        return `http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`; 
+        return `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`; 
     }
 
     return (
