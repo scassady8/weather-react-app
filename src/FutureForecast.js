@@ -35,6 +35,6 @@ export default function FutureForecast(props) {
         let APIUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
         axios.get(APIUrl).then(handleResponse);
 
-        return "Loading";  
+        return null;  
     }  
 }
