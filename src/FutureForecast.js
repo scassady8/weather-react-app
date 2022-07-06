@@ -5,7 +5,7 @@ import "./FutureForecast.css";
 
 export default function FutureForecast(props) {
     let [loaded, setLoaded] = useState(false)
-    let [FutureData, setFutureData] = useState(null);
+    let [futureData, setFutureData] = useState(null);
 
     function handleResponse(response) {
         setFutureData(response.data.daily);
@@ -17,7 +17,7 @@ export default function FutureForecast(props) {
             <div className="futureForecast">
                 <div className="row">
                     <div className="col">
-                        <FutureForecastDay data={FutureData[0]}/>
+                        <FutureForecastDay data={futureData[0]}/>
                     </div>
                 </div>
             </div>
