@@ -17,11 +17,11 @@ export default function Forecast(props) {
           <div className="col-12">
             <h4 className="text-capitalize">{props.data.description}</h4>
           </div>
-          <div className="col-4">
+          <div className="col-5">
                 <img src={props.data.icon} alt={props.data.icondescription} />
                 <TemperatureConversion temperature={props.data.temperature} />
             </div>
-          <div className="col-4">
+          <div className="col-3">
                 <ul>
                 <li>Max: {Math.round(props.data.max)}°</li> 
                 <li>Min: {Math.round(props.data.min)}°</li> 

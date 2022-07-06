@@ -1,6 +1,7 @@
 .Forecast h1 {
-    color: #2994b2;
-    font-weight: 700;
+    color: #288fb4;
+    font-weight: 600;
+    font-size: 2.25rem;
     text-transform: capitalize;
   }
   .Forecast ul {
