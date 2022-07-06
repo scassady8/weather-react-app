@@ -70,6 +70,7 @@ export default function Search(props) {
         </div>
       </form>
       <Forecast data={weatherData} />
+      <FutureForecast coord={weatherData.coord}/>
     </div>
   ); }
   else {
