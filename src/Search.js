@@ -54,7 +54,7 @@ export default function Search(props) {
           <div className="col-9">
             <input
               type="search"
-              className="form-control float-end"
+              className="form-control"
               placeholder="Enter location"
               autoFocus="on"
               onChange={updateCity}
@@ -63,7 +63,7 @@ export default function Search(props) {
           <div className="col-3">
             <input
               type="button"
-              className="btn form-control float-end shadow-sm current-location-btn w-100"
+              className="btn form-control shadow-sm current-location-btn w-100"
               value="Current location"
             />
           </div>
