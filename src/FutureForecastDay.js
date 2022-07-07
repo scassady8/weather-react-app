@@ -1,6 +1,5 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './FutureForecastDay.css';
 
 export default function FutureForecastDay(props) {
     function maxTemperature() {
@@ -29,8 +28,8 @@ export default function FutureForecastDay(props) {
             <div className="futureForecast-day">{formatDay()}</div>
                         <img src={getIcon()} alt={props.data.weather[0].description}/>
                         <div className="futureForecast-temperature">
-                            <span className="futureForecast-temperature-max pe-3">{maxTemperature()}</span>
-                            <span className="futureForecast-temperature-min">{minTemperature()}</span>
+                            <span className="pe-3">{maxTemperature()}</span>
+                            <span className="opacity-75">{minTemperature()}</span>
                         </div>
         </div>
     );
