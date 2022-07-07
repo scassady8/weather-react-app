@@ -23,15 +23,15 @@ export default function Forecast(props) {
                 <TemperatureConversion temperature={props.data.temperature} />
             </div>
           <div className="col-4">
-                <ul mt-20>
-                <li><span className="caption"> High/Low</span> {Math.round(props.data.max)}°/{Math.round(props.data.min)}°</li> 
-                <li><span className="caption"> Feels like</span> {Math.round(props.data.feelsLikeTemp)}°</li> 
+                <ul>
+                <li>High/Low<span className="float-end">{Math.round(props.data.max)}°/{Math.round(props.data.min)}°</span></li> 
+                <li>Feels like<span className="float-end">{Math.round(props.data.feelsLikeTemp)}°</span></li> 
                 </ul>
             </div>
           <div className="col-4">
-            <ul mt-20>
-              <li><span className="caption"> Humidity</span> {props.data.humidity}%</li>
-              <li><span className="caption"> Wind</span> {Math.round(props.data.wind)} m/s</li>
+            <ul>
+              <li>Humidity<span className="float-end">{props.data.humidity}%</span></li>
+              <li>Wind<span className="float-end">{Math.round(props.data.wind)} m/s</span></li>
             </ul>
           </div>
         </div>
