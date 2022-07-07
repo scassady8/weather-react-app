@@ -18,17 +18,17 @@ export default function Forecast(props) {
           <div className="col-12">
             <h4 className="text-capitalize">{props.data.description}</h4>
           </div>
-          <div className="col-4">
+          <div className="col-5 ps-5">
                 <img src={props.data.icon} alt={props.data.icondescription} />
                 <TemperatureConversion temperature={props.data.temperature} />
             </div>
-          <div className="col-4">
+          <div className="col-3">
                 <ul>
                 <li>High/Low<span className="float-end">{Math.round(props.data.max)}°/{Math.round(props.data.min)}°</span></li> 
                 <li>Feels like<span className="float-end">{Math.round(props.data.feelsLikeTemp)}°</span></li> 
                 </ul>
             </div>
-          <div className="col-4">
+          <div className="col-3">
             <ul>
               <li>Humidity<span className="float-end">{props.data.humidity}%</span></li>
               <li>Wind<span className="float-end">{Math.round(props.data.wind)} m/s</span></li>
