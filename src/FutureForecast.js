@@ -31,7 +31,7 @@ export default function FutureForecast(props) {
                     {futureData.map(function(dailyFutureData, index) {
                         if (index > 0 && index < 6) {
                             return (
-                                <div className="col" key="index">
+                                <div className="col" key={index}>
                                     <FutureForecastDay data={dailyFutureData}/>
                                 </div>   
                             );
