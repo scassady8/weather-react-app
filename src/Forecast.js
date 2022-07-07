@@ -24,14 +24,14 @@ export default function Forecast(props) {
             </div>
           <div className="col-4">
                 <ul mt-20>
-                <li><FontAwesomeIcon icon="fa-light fa-temperature-high" /><span className="caption"> High/Low</span> {Math.round(props.data.max)}°/{Math.round(props.data.min)}°</li> 
-                <li><FontAwesomeIcon icon="fa-light fa-temperature-half" /><span className="caption"> Feels like</span> {Math.round(props.data.feelsLikeTemp)}°</li> 
+                <li><span className="caption"> High/Low</span> {Math.round(props.data.max)}°/{Math.round(props.data.min)}°</li> 
+                <li><span className="caption"> Feels like</span> {Math.round(props.data.feelsLikeTemp)}°</li> 
                 </ul>
             </div>
           <div className="col-4">
             <ul mt-20>
-              <li><FontAwesomeIcon icon="fa-light fa-droplet" /><span className="caption"> Humidity</span> {props.data.humidity}%</li>
-              <li><FontAwesomeIcon icon="fa-light fa-wind" /><span className="caption"> Wind</span> {Math.round(props.data.wind)} m/s</li>
+              <li><span className="caption"> Humidity</span> {props.data.humidity}%</li>
+              <li><span className="caption"> Wind</span> {Math.round(props.data.wind)} m/s</li>
             </ul>
           </div>
         </div>
